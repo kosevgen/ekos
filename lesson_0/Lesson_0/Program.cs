@@ -16,7 +16,7 @@ namespace Lesson_0
             int a = 100_000;
             decimal b = 10_000_000_998.1233355446M;
 
-            Console.WriteLine("int a = {1} decimal b = {2} ", a, b);
+            Console.WriteLine("int a = {0} decimal b = {1} ", a, b);
 
             Console.ReadKey();
 
