@@ -22,7 +22,6 @@ namespace ConsoleApp1
             Console.WriteLine("\n\n\n");
             Console.WriteLine(" int b = " + b);
             Console.WriteLine("\n\n\n");
-
             Console.WriteLine(" double c = " + c);
             Console.WriteLine("\n\n\n");
             Console.WriteLine("\t THE END!!! ");
