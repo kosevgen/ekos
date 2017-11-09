@@ -1,0 +1,7 @@
+E:\C#\source\repos\Lesson_0\Lesson_0\bin\Debug\Lesson_0.exe.config
+E:\C#\source\repos\Lesson_0\Lesson_0\bin\Debug\Lesson_0.exe
+E:\C#\source\repos\Lesson_0\Lesson_0\bin\Debug\Lesson_0.pdb
+E:\C#\source\repos\Lesson_0\Lesson_0\obj\Debug\Lesson_0.csproj.CoreCompileInputs.cache
+E:\C#\source\repos\Lesson_0\Lesson_0\obj\Debug\Lesson_0.exe
+E:\C#\source\repos\Lesson_0\Lesson_0\obj\Debug\Lesson_0.pdb
+E:\C#\source\repos\lesson_0\Lesson_0\obj\Debug\Lesson_0.csprojResolveAssemblyReference.cache
