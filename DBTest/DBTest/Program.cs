@@ -40,7 +40,12 @@ namespace DBTest
                 SqlDataReader dataReader = readAllDataFromDB.ExecuteReader();
                 while (dataReader.Read()) {
 
-                    Console.WriteLine(dataReader["Surname"]);
+                    Console.WriteLine(Convert.ToString( dataReader[1]) + " " + 
+                        Convert.ToString(dataReader[2]) + " " + 
+                        Convert.ToString(dataReader[3]) + " " + 
+                        Convert.ToString(dataReader[4]) + " " + 
+                        Convert.ToString(dataReader[5]) + " " + 
+                        Convert.ToString(dataReader[6]));
 
                 }
                 Console.ReadKey();
@@ -67,6 +72,12 @@ namespace DBTest
                 Console.ReadKey();
 
             }
+
+            publicConnectionToMSDB testConn = new publicConnectionToMSDB();
+            SqlConnection conn = testConn.connectionToMSDB();
+            conn.Open();
+            conn.Close();
+
             
         }
     }
