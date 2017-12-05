@@ -15,6 +15,7 @@ namespace DBTest
 
             SqlConnectionClass sqlConnection = new SqlConnectionClass();
             SqlConnection sqlConnectionToMSSQL = new SqlConnection(sqlConnection.sqlConnectionString);
+                        
             try
             {
 
@@ -32,6 +33,24 @@ namespace DBTest
             }
 
             //do something
+            try {
+
+                SqlCommand readAllDataFromDB = sqlConnectionToMSSQL.CreateCommand();
+                readAllDataFromDB.CommandText ="SELECT * FROM DBForTests.dbo.HumanInfo";
+                SqlDataReader dataReader = readAllDataFromDB.ExecuteReader();
+                while (dataReader.Read()) {
+
+                    Console.WriteLine(dataReader["Surname"]);
+
+                }
+                Console.ReadKey();
+
+            }
+            catch (SqlException sqex) {
+
+                Console.WriteLine(sqex);
+
+            }
 
             try
             {
