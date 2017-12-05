@@ -12,8 +12,7 @@ namespace DBTest
         static string password = "ASDqwe!@#";
         public string sqlConnectionString = @"Data Source=" + datasource + ";Initial Catalog="
                     + database + ";Persist Security Info=True;User ID=" + username + ";Password=" + password;
-        
-               
+                       
     }
 
 }

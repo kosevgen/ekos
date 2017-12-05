@@ -78,7 +78,6 @@ namespace DBTest
             conn.Open();
             conn.Close();
 
-            
-        }
+         }
     }
 }
