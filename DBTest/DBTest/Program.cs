@@ -12,15 +12,14 @@ namespace DBTest
     {
         static void Main(string[] args)
         {
-
-            SqlConnectionClass sqlConnection = new SqlConnectionClass();
-            SqlConnection sqlConnectionToMSSQL = new SqlConnection(sqlConnection.sqlConnectionString);
-                        
+            PublicConnectionToMSDB publicConnection = new PublicConnectionToMSDB();
+            SqlConnection conn = publicConnection.ConnectionToMSDB();
+                                                                       
             try
             {
 
                 Console.Write("Establish connection to DB ... ");
-                sqlConnectionToMSSQL.Open();
+                conn.Open();
                 Console.Write(" COMPLITE " + "\n");
                 Console.ReadKey();
 
@@ -35,7 +34,7 @@ namespace DBTest
             //do something
             try {
 
-                SqlCommand readAllDataFromDB = sqlConnectionToMSSQL.CreateCommand();
+                SqlCommand readAllDataFromDB = conn.CreateCommand();
                 readAllDataFromDB.CommandText ="SELECT * FROM DBForTests.dbo.HumanInfo";
                 SqlDataReader dataReader = readAllDataFromDB.ExecuteReader();
                 while (dataReader.Read()) {
@@ -61,7 +60,7 @@ namespace DBTest
             {
 
                 Console.Write("Closing connection to DB ... ");
-                sqlConnectionToMSSQL.Close();
+                conn.Close();
                 Console.Write(" COMPLITE " + "\n");
                 Console.ReadKey();
 
@@ -72,12 +71,7 @@ namespace DBTest
                 Console.ReadKey();
 
             }
-
-            publicConnectionToMSDB testConn = new publicConnectionToMSDB();
-            SqlConnection conn = testConn.connectionToMSDB();
-            conn.Open();
-            conn.Close();
-
+                        
          }
     }
 }
